@@ -4,7 +4,7 @@ import controller.MainController;
 import processing.core.PApplet;
 
 public class MainView extends PApplet {
-	MainController mainController;
+	private MainController mainController;
 		
 	public static void main(String[] args) {
 		PApplet.main("view.MainView");
@@ -19,7 +19,7 @@ public class MainView extends PApplet {
 	}
 	
 	public void draw() {
-		background(155);
+		background(255);
 		mainController.draw();
 	}
 	

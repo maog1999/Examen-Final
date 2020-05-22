@@ -2,33 +2,35 @@ package model;
 
 import processing.core.PApplet;
 
-public abstract class Padre implements Runnable{
+public abstract class Personas implements Runnable{
 
-	private int posX, posY, Tama, colore, r , g , b, direc1, direc2;
+	protected int posX;
+	protected int posY;
+	protected int Tama;
+	protected int colore;
+	private int direc1;
+	private int direc2;
 	private PApplet app;
 	
 	
-	public Padre(PApplet app) {
-		this.posX = (int) (app.random(100,500));
-		this.posY = (int) (app.random(100,500));
-		this.Tama = (int) (app.random(20,60));
-		r = (int) (app.random(0,255));
-		g = (int) (app.random(0,255));
-		b = (int) (app.random(0,255));
-		this.colore = app.color(r , g, b);
+	public Personas(int posX, int posY, int Tama, int colore, PApplet app) {
+		this.app = app;
+		this.posX = posX;
+		this.posY = posY;
+		this.Tama = Tama;
+		this.colore = colore;
 		direc1 = (int) (app.random(-2,2));
 		direc2 = (int) (app.random(-2,2));
 
 		
 	}
 	
-	public void draw() {
-		
+	public void pintar() {
 	} 
 	
 	public void run() {
 		
-		move();
+		
 	}
 	
 	public void move() {
@@ -77,29 +79,7 @@ public abstract class Padre implements Runnable{
 		this.colore = colore;
 	}
 
-	public int getR() {
-		return r;
-	}
 
-	public void setR(int r) {
-		this.r = r;
-	}
-
-	public int getG() {
-		return g;
-	}
-
-	public void setG(int g) {
-		this.g = g;
-	}
-
-	public int getB() {
-		return b;
-	}
-
-	public void setB(int b) {
-		this.b = b;
-	}
 
 	public int getDirec1() {
 		return direc1;
