@@ -77,7 +77,37 @@ public class Logic {
 			//pero cuando lo pinto, no me pinta y ya llevo varado aqui intentado mirar que es y no por que me salta
 			//un null si está lleno
 			persos.get(i).pintar();
+			
+			Thread hilo;
+			hilo = new Thread(persos.get(i));
+			hilo.start();
 		}
 
+	}
+	
+	public void ordenar() {
+		
+	}
+	
+	public void choque() {
+		for (int i = 0; i < persos.size(); i++) {
+			for (int j = 0; j < persos.size(); j++) {
+					if(PApplet.dist(persos.get(i).getPosX(), persos.get(i).getPosY(), persos.get(j).getPosY(), persos.get(j).getPosY())< persos.get(i).getTama()) {
+						
+						if(persos.get(i) != persos.get(j)) {
+							persos.get(i).setDirec1(persos.get(i).getDirec1()*-1);
+							persos.get(i).setDirec2(persos.get(i).getDirec2()*-1);
+							
+							persos.get(j).setDirec1(persos.get(j).getDirec1()*-1);
+							persos.get(j).setDirec2(persos.get(j).getDirec2()*-1);
+
+						}if (persos.get(i) instanceof Sanas && persos.get(j) instanceof Infectados) {
+							
+							
+						}
+					}
+				
+			}
+		}
 	}
 }

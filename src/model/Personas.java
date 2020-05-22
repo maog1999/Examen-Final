@@ -17,7 +17,7 @@ public abstract class Personas implements Runnable{
 		this.app = app;
 		this.posX = posX;
 		this.posY = posY;
-		this.Tama = Tama;
+		this.Tama = 7;
 		this.colore = colore;
 		direc1 = (int) (app.random(-2,2));
 		direc2 = (int) (app.random(-2,2));
@@ -30,7 +30,7 @@ public abstract class Personas implements Runnable{
 	
 	public void run() {
 		
-		
+		move();
 	}
 	
 	public void move() {
