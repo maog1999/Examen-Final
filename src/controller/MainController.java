@@ -13,8 +13,8 @@ public class MainController {
 		logic = new Logic(app);
 	}
 
-	public void drawFigu() {
-		logic.drawFigu();
+	public void draw() {
+		logic.draw();
 	}
 
 }

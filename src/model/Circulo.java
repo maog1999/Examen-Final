@@ -2,7 +2,7 @@ package model;
 
 import processing.core.PApplet;
 
-public class Circulo extends Figuras{
+public class Circulo extends Padre{
 
 	private PApplet app;
 	

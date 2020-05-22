@@ -2,7 +2,7 @@ package model;
 
 import processing.core.PApplet;
 
-public class Cuadrado extends Figuras {
+public class Cuadrado extends Padre {
 
 	PApplet app;
 	

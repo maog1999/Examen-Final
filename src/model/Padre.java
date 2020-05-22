@@ -2,13 +2,13 @@ package model;
 
 import processing.core.PApplet;
 
-public abstract class Figuras implements Runnable{
+public abstract class Padre implements Runnable{
 
 	private int posX, posY, Tama, colore, r , g , b, direc1, direc2;
 	private PApplet app;
 	
 	
-	public Figuras(PApplet app) {
+	public Padre(PApplet app) {
 		this.posX = (int) (app.random(100,500));
 		this.posY = (int) (app.random(100,500));
 		this.Tama = (int) (app.random(20,60));

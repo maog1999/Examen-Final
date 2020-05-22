@@ -20,7 +20,7 @@ public class MainView extends PApplet {
 	
 	public void draw() {
 		background(155);
-		mainController.drawFigu();
+		mainController.draw();
 	}
 	
 	public void mousePressed() {
